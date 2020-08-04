@@ -1,0 +1,222 @@
+header {
+    background-color: #fbfbfb;
+    position: relative;
+    height: 767px;
+    overflow: hidden;
+}
+
+.flying__symbol {
+    position: absolute;
+    height: 50px;
+    background: linear-gradient(30deg, #ff8f5a, #ff2f96);
+    /* Градиент для текста */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* Обрезаем фон по тексту */
+    -webkit-text-fill-color: transparent;
+    /* Прозрачный текст */
+    z-index: 1;
+    font-weight: 900;
+    transition: 1s;
+}
+
+/* .flying__symbol:nth-child(2n-1) {
+    animation-duration: 1s;
+    animation-name: slidein1;
+}
+
+.flying__symbol:nth-child(2n) {
+    animation-duration: 1s;
+    animation-name: slidein2;
+} */
+
+.symbol1 {
+    top: 139px;
+    left: 135px;
+    font-size: 50px;
+    transform: rotate(30deg);
+}
+
+.symbol2 {
+    top: 372px;
+    left: 255px;
+    font-size: 55px;
+    transform: rotate(15deg);
+}
+
+.symbol3 {
+    top: 170px;
+    left: 800px;
+    font-size: 30px;
+    transform: rotate(-15deg);
+}
+
+.symbol4 {
+    top: 545px;
+    left: 950px;
+    font-size: 38px;
+    transform: rotate(23deg);
+}
+
+.symbol5 {
+    top: 670px;
+    left: 390px;
+    font-size: 40px;
+    transform: rotate(-25deg);
+}
+
+/* @keyframes slidein1 {
+    from {
+        top: -50px;
+        bottom: -50px;
+        right: -50px;
+        left: -50px;
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes slidein2 {
+    from {
+        top: -50px;
+        bottom: -50px;
+        right: -50px;
+        left: -50px;
+        transform: rotate(-180deg);
+    }
+} */
+
+.header {
+    height: 100%;
+    background-color: inherit;
+}
+
+.header__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.menu__button {
+    display: none;
+    width: 45px;
+    height: 45px;
+    background: url(../img/burger.png) no-repeat center;
+    background-size: 100%;
+}
+
+.menu__button__opened {
+    background: url(../img/closed-menu.png) no-repeat center;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 30px;
+    padding-bottom: 3px;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+.menu li:hover {
+    color: #fc557c;
+    border-bottom: 1px solid #fc557c;
+}
+
+.phone__number {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.phone__number:hover {
+    color: red;
+}
+
+.call__button {
+    font-size: 16px;
+    height: 45px;
+    width: 205px;
+    color: #f53f4f;
+    background-color: #fbfbfb;
+    border: 1px solid #f53f4f;
+}
+
+.call__button:hover {
+    color: whitesmoke;
+    background-color: red;
+}
+
+.visual__container {
+    position: relative;
+    width: 100%;
+    height: 692px;
+}
+
+.eclipse {
+    position: absolute;
+    bottom: 0;
+    right: -230px;
+    width: 1000px;
+    height: 750px;
+    background: linear-gradient(30deg, #ff8f5a, #ff2f96) no-repeat;
+    border-radius: 65% 35% 35% 65% / 50% 50% 50% 50%;
+    transform-origin: 100% 0;
+    transform: rotate(-38deg) skewY(5deg);
+}
+
+.man_shade {
+    position: absolute;
+    bottom: -55px;
+    right: -110px;
+    background: url(../img/man_shade.png) no-repeat;
+    background-size: 105%;
+    height: 700px;
+    width: 500px;
+    z-index: 3;
+}
+
+.man {
+    position: absolute;
+    top: 18px;
+    left: 45px;
+    background: url(../img/man.png) no-repeat;
+    height: 630px;
+    width: 440px;
+    z-index: 2;
+}
+
+.header__text {
+    position: absolute;
+    top: 300px;
+    font-size: 80.5px;
+    font-weight: 900;
+    z-index: 4;
+}
+
+.header__text span {
+    display: block;
+}
+
+.myprofession {
+    font-size: 25.5px;
+    font-weight: 400;
+    margin-top: 37px;
+    color: gray;
+}
+
+.show__more__button {
+    font-size: 18px;
+    color: white;
+    background-color: #ff4e2e;
+    height: 60px;
+    width: 270px;
+    margin-top: 50px;
+}
+
+.show__more__button:hover {
+    color: whitesmoke;
+    background-color: red;
+}

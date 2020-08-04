@@ -1,0 +1,178 @@
+html {
+    box-sizing: border-box;
+    /*изменяет алгоритм расчета размера блока,
+      чтобы свойства width и height задавали размеры не содержимого,
+       а размеры блока.*/
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    /*все элементы, а так же псевдо элементы наследуют
+      значение свойства box-sizing*/
+}
+
+body {
+    min-width: 320px;
+    /*задает минимальный размер страницы*/
+
+    margin: 0;
+    /*обнуляет margin*/
+
+    font-family: Roboto, Roboto;
+    /*задает шрифт и семейство шрифтов для всей страницы*/
+    font-size: 16px;
+    /*задает размер шрифта для всей страницы*/
+    line-height: 0.8;
+    /*задает межстрочный интервал для всей страницы*/
+    letter-spacing: -0.32px;
+    /*задает ширину символов для всей страницы*/
+    color: #000;
+    /*задает основной цвет текста на странице*/
+
+    background-color: #fff;
+    /*задает цвет фона*/
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    /*обнуляет margin в заголовках*/
+}
+
+img {
+    max-width: 100%;
+    /*задает размер изображений по ширине*/
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    margin: 0;
+    /*обнуляет margin в списках*/
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    /* убирает декоративный элемент списка*/
+}
+
+figure {
+    margin: 0;
+}
+
+form,
+input,
+button {
+    outline: none;
+    border: none;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.disable-scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+.fixed-container {
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* roboto-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v20-latin_cyrillic-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('../fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+/* roboto-500 - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/roboto-v20-latin_cyrillic-500.eot');
+    /* IE9 Compat Modes */
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+        url('../fonts/roboto-v20-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/roboto-v20-latin_cyrillic-500.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/roboto-v20-latin_cyrillic-500.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/roboto-v20-latin_cyrillic-500.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+/* roboto-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v20-latin_cyrillic-700.eot');
+    /* IE9 Compat Modes */
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('../fonts/roboto-v20-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/roboto-v20-latin_cyrillic-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/roboto-v20-latin_cyrillic-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/roboto-v20-latin_cyrillic-700.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+/* roboto-900 - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/roboto-v20-latin_cyrillic-900.eot');
+    /* IE9 Compat Modes */
+    src: local('Roboto Black'), local('Roboto-Black'),
+        url('../fonts/roboto-v20-latin_cyrillic-900.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/roboto-v20-latin_cyrillic-900.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/roboto-v20-latin_cyrillic-900.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/roboto-v20-latin_cyrillic-900.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/roboto-v20-latin_cyrillic-900.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+button:hover {
+    cursor: pointer;
+}

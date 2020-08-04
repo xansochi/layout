@@ -1,0 +1,119 @@
+main {
+    position: relative;
+    z-index: 10;
+}
+
+main section {
+    padding: 98px 0;
+}
+
+main h1 {
+    font-size: 54px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+
+.first__section {
+    min-height: 650px;
+    width: 100%;
+    background-color: white;
+}
+
+.my__skills__list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20.5px;
+    line-height: 30px;
+}
+
+.my__skills__list li {
+    color: #8993ad;
+    text-align: center;
+    padding-top: 90px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.my__skills__list a:hover {
+    color: #fc557c;
+}
+
+.my__skills__list li:nth-child(1) {
+    background-image: url(../img/tools-and-utensils.png);
+}
+
+.my__skills__list li:nth-child(2) {
+    background-image: url(../img/responsive.png);
+}
+
+.my__skills__list li:nth-child(3) {
+    background-image: url(../img/programming.png);
+}
+
+.my__skills__list li:nth-child(4) {
+    background-image: url(../img/coding.png);
+}
+
+.first__section button {
+    display: block;
+    font-size: 19px;
+    color: white;
+    background-color: #ff4e2e;
+    height: 60px;
+    width: 270px;
+    margin: 92px auto 0;
+}
+
+.second__section {
+    height: 855px;
+    background-color: #fbfbfb;
+    font-weight: 500;
+    font-size: 20.5px;
+}
+
+.first__section button:hover {
+    color: whitesmoke;
+    background-color: red;
+}
+
+
+.examples {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+}
+
+.examples img {
+    margin: 0 auto;
+
+}
+
+.examples li span {
+    color: #8993ad;
+    margin-top: 35px;
+    display: block;
+    text-align: center;
+}
+
+.examples li span:hover {
+    color: #fc557c;
+}
+
+.second__section__button {
+    display: block;
+    font-size: 19px;
+    color: white;
+    background-color: #ff4e2e;
+    height: 60px;
+    width: 270px;
+    margin: 100px auto 0;
+}
+
+.second__section__button:hover {
+    color: whitesmoke;
+    background-color: red;
+}
