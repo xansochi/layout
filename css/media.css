@@ -1,3 +1,11 @@
+/* CALL-BACK-WINDOW  */
+@media (max-width: 650px) {
+  .callback_window {
+    max-width: 90%;
+  }
+}
+
+
 /* HEADER */
 @media (max-width: 1200px) {
   .fixed-container {
