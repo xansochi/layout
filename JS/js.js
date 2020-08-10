@@ -17,7 +17,8 @@ $(function () {
 
     let offset = $(href).offset().top;
 
-    $("body,html").animate({
+    $("body,html").animate(
+      {
         scrollTop: offset,
       },
       700
@@ -59,9 +60,7 @@ $(function () {
   );
 
   function callbutton() {
-    $(".callback_window").animate({
-      width: "400px"
-    }, 400);
+    $(".callback_window").animate({ width: "400px" }, 400);
     $(".callback_window__close-button").css("transform", "rotate(180deg)");
 
     $(".callback_window__form").css("display", "block");
@@ -71,21 +70,18 @@ $(function () {
     let call_width = $(".callback_window").width();
     if (call_width > 200) {
       $(".callback_window__form").css("display", "none");
-      $(".callback_window").animate({
-        width: "0"
-      }, 400);
+      $(".callback_window").animate({ width: "40px" }, 400);
       $(".callback_window__close-button").css("transform", "rotate(0deg)");
     } else {
-      $(".callback_window").animate({
-        width: "400px"
-      }, 400);
+      $(".callback_window").animate({ width: "400px" }, 400);
       $(".callback_window__close-button").css("transform", "rotate(180deg)");
       $(".callback_window__form").css("display", "block");
     }
   }
 
   function scroll_top() {
-    $("body,html").animate({
+    $("body,html").animate(
+      {
         scrollTop: 0,
       },
       700
@@ -116,7 +112,7 @@ $(function () {
 
   $(".callback_window__close-button").click(hide_showcall);
 
-  $(".callback_window__form").submit(function () {
+  $(".callback_window__send-button").click(function () {
     event.preventDefault();
     hide_showcall();
     alert(
