@@ -134,7 +134,7 @@ $(function () {
   $(".callback_window__form").submit(function () {
     event.preventDefault();
 
-    if (form_phone.val() && form_name.val()) {
+    if (form_phone.val().trim() && form_name.val().trim()) {
 
       alert(
         "Ваша заявка на звонок принята. Мы перезвоним Вам в ближайшее время."
