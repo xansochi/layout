@@ -37,13 +37,14 @@ $(function () {
     `
     <div class="callback_window">
     <form class="callback_window__form">
-      <label>* Номер телефона
-        <input class="callback_window__phone" type="text" name="guest_phone" placeholder="1234567890"
-          maxlength="10" required>
+      <label>* Номер телефона (в десятизначном формате)
+         <input class="callback_window__phone" type="text" name="guest_phone" placeholder="1234567890"
+          maxlength="10">
       </label>
+      
 
       <label>* Имя
-        <input class="callback_window__name" name="guest_phone" placeholder="Джон" maxlength="30" required></input>
+        <input class="callback_window__name" name="guest_phone" placeholder="Джон" maxlength="30"></input>
       </label>
 
       <label>Коментарий
@@ -96,32 +97,60 @@ $(function () {
 
   $(".show__more__button").click(function () {
     callbutton();
-    scroll_top();
   });
 
   $(".first_section__button").click(function () {
     callbutton();
-    scroll_top();
   });
 
   $(".second__section__button").click(function () {
     callbutton();
-    scroll_top();
   });
 
   $(".footer__call__button").click(function () {
     callbutton();
-    scroll_top();
   });
 
   $(".callback_window__close-button").click(hide_showcall);
 
+
+
+  const form_phone = $('.callback_window__phone');
+  const form_name = $('.callback_window__name');
+
+
+  form_phone.bind("change keyup input click", function () {
+    if (this.value.match(/[^0-9]/g)) {
+      this.value = this.value.replace(/[^0-9]/g, '');
+    }
+  });
+
+  form_name.bind("change keyup input click", function () {
+    if (this.value.match(/[^а-яА-Яa-zA-Z\s]/g)) {
+      this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s]/g, '');
+    }
+  });
+
   $(".callback_window__form").submit(function () {
     event.preventDefault();
-    hide_showcall();
-    alert(
-      "Ваша заявка на звонок принята. Мы перезвоним Вам в ближайшее время."
-    );
+
+    if (form_phone.val() && form_name.val()) {
+
+      alert(
+        "Ваша заявка на звонок принята. Мы перезвоним Вам в ближайшее время."
+      );
+      hide_showcall();
+      form_phone.removeClass("error");
+      form_name.removeClass("error");
+
+      form_phone.val(' ');
+      form_name.val(' ');
+
+    } else {
+      alert("Следующие поля не могут быть пустыми");
+      form_phone.addClass("error");
+      form_name.addClass("error");
+    }
   });
 
   // owl-carousel
